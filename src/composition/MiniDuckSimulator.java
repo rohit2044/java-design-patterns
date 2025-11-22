@@ -9,7 +9,8 @@ public class MiniDuckSimulator {
         mallard.performQuack();
         mallard.performFly();
 
-        // modify fly behaviour
+        // modify fly behaviour at runtime
+        System.out.println("\n changing fly behavior of mallard duck");
         mallard.setFlyBehavior(new FlyNoWay());
         mallard.performFly();
     }

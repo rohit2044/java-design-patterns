@@ -37,10 +37,16 @@ public class PizzaStore {
 
         return pizza;
 
-        // Cases:
+        // Bad Cases:
         // 1. if to remove one type of Pizza, we need to change this method
         // 2. new type of pizza to be added
-
         // Method violates design principle: Closed for modification
+
+        // More reasons to modify this method:
+        // 1. Moving out (encapsulating object creation)
+        // 2. pizza-creating factory can be used to handle multiple clients like:
+        //          OnlinePizzaShop, HomeDeliveryPizza, PizzaShopMenu (price based pizza ordering), etc.
+
+        // Solution implemented in PizzaStore2.java (Factory)
     }
 }

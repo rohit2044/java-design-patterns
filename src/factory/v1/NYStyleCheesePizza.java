@@ -1,5 +1,6 @@
 package factory.v1;
 
+
 public class NYStyleCheesePizza extends Pizza {
 
     public NYStyleCheesePizza() {
