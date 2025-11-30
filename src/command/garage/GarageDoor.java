@@ -1,4 +1,4 @@
-package command.v0.garage;
+package command.garage;
 
 public class GarageDoor {
 

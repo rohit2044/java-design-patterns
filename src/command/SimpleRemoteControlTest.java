@@ -1,19 +1,19 @@
-package command.v0;
+package command;
 
-import command.v0.garage.GarageDoor;
-import command.v0.garage.GarageDoorOpenCommand;
-import command.v0.light.LightOffCommand;
-import command.v0.light.LightOnCommand;
-import command.v0.light.LivingRoomLight;
+import command.garage.GarageDoor;
+import command.garage.GarageDoorOpenCommand;
+import command.light.Light;
+import command.light.LightOffCommand;
+import command.light.LightOnCommand;
 
-public class RemoteControlTest {
+public class SimpleRemoteControlTest {
     public static void main(String[] args) {
         var remote = new SimpleRemoteControl();
-        var lightOnCommand = new LightOnCommand(new LivingRoomLight());
+        var lightOnCommand = new LightOnCommand(new Light("Living Room"));
         remote.setCommand(lightOnCommand);
         remote.buttonWasPressed();
 
-        var lightOffCommand = new LightOffCommand(new LivingRoomLight());
+        var lightOffCommand = new LightOffCommand(new Light("Dining Room"));
         remote.setCommand(lightOffCommand);
         remote.buttonWasPressed();
 

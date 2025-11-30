@@ -1,6 +1,6 @@
-package command.v0.light;
+package command.light;
 
-import command.v0.Command;
+import command.Command;
 
 public class LightOffCommand implements Command {
 
@@ -13,5 +13,10 @@ public class LightOffCommand implements Command {
     @Override
     public void execute() {
         light.off();
+    }
+
+    @Override
+    public void undo() {
+        light.on();
     }
 }

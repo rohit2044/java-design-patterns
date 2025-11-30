@@ -1,5 +1,7 @@
-package command.v0;
+package command;
 
 public interface Command {
     void execute();
+
+    void undo();
 }

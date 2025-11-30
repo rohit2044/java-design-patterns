@@ -1,6 +1,12 @@
-package command.v0;
+package command;
 
+/**
+ * Invoker
+ */
+
+// Decoupled from receiver
 public class SimpleRemoteControl {
+
     Command slot;
 
     public SimpleRemoteControl() {}

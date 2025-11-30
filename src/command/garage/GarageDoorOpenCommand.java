@@ -1,6 +1,6 @@
-package command.v0.garage;
+package command.garage;
 
-import command.v0.Command;
+import command.Command;
 
 public class GarageDoorOpenCommand implements Command {
 
@@ -13,5 +13,10 @@ public class GarageDoorOpenCommand implements Command {
     @Override
     public void execute() {
         door.up();
+    }
+
+    @Override
+    public void undo() {
+        door.down();
     }
 }
